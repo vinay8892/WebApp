@@ -77,6 +77,28 @@
             });
 	      });
 		  
+		  
+		  $('#SubscribeForNewsLetter').click(function(){
+		  
+            var snewsLetterEmail=$('#newsLetterEmail').val()
+			
+            $.ajax({
+                url: 'https://tgroz9ryhi.execute-api.ap-south-1.amazonaws.com/Prod/api/NewsLetter',
+                method: 'POST',
+                data: {
+                    email: snewsLetterEmail 
+                },
+                success: function () {
+                    
+                      window.alert('Congratulations. Now you are subscribed to our monthly news letter');
+                },
+                error: function () {
+
+                   window.alert('Congratulations. Now you are subscribed to our monthly news letter');
+                }
+
+            });
+	      });
 
 		  
 	 });
@@ -477,13 +499,13 @@
 				<div class="col-md-12 col-sm-12">
 					<br />
 					<div class="section-title">
-						<h2>lease go through below video link for more details</h2>
+						<h2>Please go through below video link for more details</h2>
 					</div>
 				</div>
 
 				<div class="col-md-12 col-sm-12">
 					<div class="section-title">
-						<em> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<iframe src="//www.youtube.com/embed/3_yv4gHjcwA" width="350" height="350"></iframe></em>
+						<em align="center"><iframe src="//www.youtube.com/embed/3_yv4gHjcwA" width="350" height="350"></iframe></em>
 					</div>
 				</div>
 
@@ -785,8 +807,8 @@
 						<div>
 							<div class="form-group">
 								<form action="#" method="get">
-									<input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
-									<input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
+									<input type="email" class="form-control" placeholder="Enter your email" name="newsLetterEmail" id="newsLetterEmail" required="">
+									<a  class="section-btn btn btn-default smoothScroll" name="SubscribeForNewsLetter" id="SubscribeForNewsLetter"  href="#">Send me</a>
 								</form>
 								<span><sup>*</sup> Please note - we do not spam your email.</span>
 							</div>
