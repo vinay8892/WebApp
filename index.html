@@ -117,7 +117,7 @@
             var sPOPUPName=$('#POPUPName').val()
 			var sPOPUPMobile=$('#POPUPMobile').val()
 			var sPOPUPEmail='No Email. It was from POP UP'
-			
+			$('.hover_bkgr_fricc').hide();
             $.ajax({
                 url: 'https://tgroz9ryhi.execute-api.ap-south-1.amazonaws.com/Prod/api/Leads',
                 method: 'POST',
@@ -128,11 +128,9 @@
 					date:''
                 },
                 success: function () {
-                      $('.hover_bkgr_fricc').hide();
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 },
                 error: function () {
-                      $('.hover_bkgr_fricc').hide();
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 }
 
