@@ -3,7 +3,8 @@
 <head>
 
      <title>Nirala Estate</title>
-
+     <!-- add icon link -->
+        <link rel = "icon" href = "images/logo.png"  type = "image/x-icon">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -99,6 +100,50 @@
 
             });
 	      });
+		  
+
+	    /*
+        $('.hover_bkgr_fricc').click(function(){
+          $('.hover_bkgr_fricc').hide();
+        });
+	    */
+        $('.popupCloseButton').click(function(){
+          $('.hover_bkgr_fricc').hide();
+        });
+		
+		
+	    $('#POPUPsendMessage').click(function(){
+		  
+            var sPOPUPName=$('#POPUPName').val()
+			var sPOPUPMobile=$('#POPUPMobile').val()
+			var sPOPUPEmail='No Email. It was from POP UP'
+			
+            $.ajax({
+                url: 'https://tgroz9ryhi.execute-api.ap-south-1.amazonaws.com/Prod/api/Leads',
+                method: 'POST',
+                data: {
+                    name: sPOPUPName ,
+                    mobile: sPOPUPMobile,
+                    email: sPOPUPEmail,
+					date:''
+                },
+                success: function () {
+                    
+                      window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
+                },
+                error: function () {
+
+                      window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
+                }
+
+            });
+	    });
+		
+		window.onload = function() {
+			setTimeout(function() {
+			$('.hover_bkgr_fricc').show();
+		    }, 10000);
+        }
 
 		  
 	 });
@@ -777,6 +822,22 @@
 			</div>
 		</div>
 	</section>
+
+   <div class="hover_bkgr_fricc">
+       <span class="helper"></span>
+       <div>
+           <div class="popupCloseButton">&times;</div>
+		   </br>
+		   <h3 style="text-align: center;"><strong>Enquire Now for Special Offers &amp; Exclusive Discounts</strong></h3>
+		   </br>
+           <input type="text" class="form-control" placeholder="Enter full name" name="POPUPName" id="POPUPName" required="">
+		   </br>
+		   <input type="mobile" class="form-control" placeholder="Enter mobile number" name="POPUPMobile" id="POPUPMobile" required="">
+		   </br>
+		   <a  class="section-btn btn btn-default smoothScroll" name="POPUPsendMessage" id="POPUPsendMessage" style="background-color:blue"  href="#">Avail Offers</a>
+        </div>
+    </div>
+
 
 	<!-- FOOTER -->
 	<footer id="footer">
