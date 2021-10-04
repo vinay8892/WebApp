@@ -1258,5 +1258,14 @@ img.hover-shadow {
     font-weight: bold;
 }
 /* Popup box BEGIN */
-
+.POPTextBoxStyle {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid #303030;
+    border-bottom: 2px solid #303030;
+    height: 50px;
+    margin: 5px 0;
+	width:90%;
+  }
   
