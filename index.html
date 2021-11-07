@@ -9,7 +9,7 @@
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="Nirala Estate brings premium apartments in Tech Zone 4, Greater Noida West, Uttar Pradesh. Nirala Estate Phase 2,3 and 4 providing 2/3 BHK residential apartments at very affordable price ranges starting @ ₹ 42L ">
      <meta name="keywords" content="nirala estate, nirala estate construction update, nirala estate price list, nirala estate noida extension, nirala estate possession date, nirala world, nirala estate complaints, nirala estate phase 1, nirala estate brochure, nirala estate phase 2, nirala estate floor plan, nirala estate reviews">
-     <meta name="author" content="http://www.nirala-estate.org/">
+     <meta name="author" content="https://nirala-estate.org/">
 	 <meta name="ROBOTS" content="INDEX, FOLLOW" />
 	 <meta name="rating" content="Safe For Kids" />
      <meta name="googlebot" content="INDEX, FOLLOW" />
@@ -29,7 +29,7 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-style.css">
-	 <script src="Javascript/head.js"></script>
+	
 	 <script src="js/jquery.js"></script>
 	 <script type="text/javascript">
 	 $(document).ready(function(){
@@ -140,68 +140,39 @@
 					date:''
                 },
                 success: function () {
+				      $("#PriceLst1").removeAttr("style");
+		              $("#PriceLst2").removeAttr("style");
+					  localStorage.setItem("detailsSubmitted", "true");
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 },
                 error: function () {
+				      $("#PriceLst1").removeAttr("style");
+		              $("#PriceLst2").removeAttr("style");
+					  localStorage.setItem("detailsSubmitted", "true");
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 }
 
             });
 	    });
 		
-		window.onload = function() {
-			setTimeout(function() {
-			$('.hover_bkgr_fricc').show();
-		    }, 10000);
-        }
+		$('#btnViewPriceList').click(function(){
+		     /*
+		     $("#PriceLst1").removeAttr("style");
+		     $("#PriceLst2").removeAttr("style");
+			 document.location.href='/#priceDetails'
+			 */
+			 $('.hover_bkgr_fricc').show();
+		});
+		
+
 
 		  
 	 });
 	 </script>
-	 <!-- Added by Lalit on 03-10-2021 for image list-->
-	<script>
-		function openModal() {
-		  document.getElementById("MenuBar").style.display="none";
-		  document.getElementById("myModal").style.display = "block";
-		}
 
-		function closeModal() {
-		  document.getElementById("myModal").style.display = "none";
-		  document.getElementById("MenuBar").style.display = "block";
-		}
-
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("demo");
-		  var captionText = document.getElementById("caption");
-		  if (n > slides.length) {slideIndex = 1}
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-			  slides[i].style.display = "none";
-		  }
-		  for (i = 0; i < dots.length; i++) {
-			  dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";
-		  dots[slideIndex-1].className += " active";
-		  captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
 
 </head>
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body id="home" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
      <section class="preloader">
@@ -231,11 +202,11 @@
 			<!-- MENU LINKS -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-nav-first">
-					<li><a href="#top" class="smoothScroll">Home</a></li>
+					<li><a href="#home" class="smoothScroll">Home</a></li>
 					<li><a href="#about" class="smoothScroll">About</a></li>
-					<li><a href="#team" class="smoothScroll">Gallery and Videos</a></li>
-					<li><a href="#courses" class="smoothScroll">Floor Plans</a></li>
-					<li><a href="#testimonial" class="smoothScroll">Price details</a></li>
+					<li><a href="#gallery" class="smoothScroll">Gallery and Videos</a></li>
+					<li><a href="#floorPlans" class="smoothScroll">Floor Plans</a></li>
+					<li><a href="#priceDetails" class="smoothScroll">Price details</a></li>
 					<li><a href="#contact" class="smoothScroll">Contact</a></li>
 				</ul>
 
@@ -537,7 +508,7 @@
 
 
 	<!-- TEAM -->
-	<section id="team">
+	<section id="gallery">
 		<div class="container">
 			<div class="row">
 
@@ -550,7 +521,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team-thumb">
 						<div class="team-image">
-							<img src="images/parkView1.jpg" class="img-responsive" alt="" />
+							<img src="images/parkView1.jpg" class="img-responsive" alt="" loading="lazy" />
 						</div>
 						<div class="team-info">
 							<h3>Park View</h3>
@@ -561,7 +532,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team-thumb">
 						<div class="team-image">
-							<img src="images/parkView2.jpg" class="img-responsive" alt="" />
+							<img src="images/parkView2.jpg" class="img-responsive" alt="" loading="lazy" />
 						</div>
 						<div class="team-info">
 							<h3>Park view</h3>
@@ -573,7 +544,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team-thumb">
 						<div class="team-image">
-							<img src="images/FrontView1.jpg" class="img-responsive" alt="" />
+							<img src="images/FrontView1.jpg" class="img-responsive" alt="" loading="lazy" />
 						</div>
 						<div class="team-info">
 							<h3>Front View</h3>
@@ -584,7 +555,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team-thumb">
 						<div class="team-image">
-							<img src="images/FrontView2.jpg" class="img-responsive" alt="" />
+							<img src="images/FrontView2.jpg" class="img-responsive" alt="" loading="lazy" />
 						</div>
 						<div class="team-info">
 							<h3>Front View</h3>
@@ -611,7 +582,7 @@
 
 
  	<!-- Courses -->
-	<section id="courses">
+	<section id="floorPlans">
 		<div class="container">
 			<div class="row">
 
@@ -626,7 +597,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/2bhk-995-Sq.ft.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="" />
+											<img src="images/2bhk-995-Sq.ft.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="" loading="lazy"/>
 										</div>
 
 									</div>
@@ -646,7 +617,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1225-Sq.ft.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1225-Sq.ft.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor" alt="" loading="lazy" />
 										</div>
 
 									</div>
@@ -667,7 +638,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1250-Sq.ft.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1250-Sq.ft.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor" alt="" loading="lazy" />
 										</div>
 
 									</div>
@@ -689,7 +660,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1270-sq.ft.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor" class="img-responsive" alt="" />
+											<img src="images/3bhk-1270-sq.ft.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor" class="img-responsive" alt="" loading="lazy" />
 										</div>
 
 									</div>
@@ -709,7 +680,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1385-sq.ft.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1385-sq.ft.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor" alt="" loading="lazy"/>
 										</div>
 									</div>
 
@@ -729,7 +700,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1535-sq.ft.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1535-sq.ft.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor" alt="" loading="lazy"/>
 										</div>
 
 									</div>
@@ -749,7 +720,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1645-sq.ft.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1645-sq.ft.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow cursor" alt="" loading="lazy" />
 										</div>
 
 									</div>
@@ -769,7 +740,7 @@
 								<div class="courses-thumb">
 									<div class="courses-top">
 										<div class="courses-image">
-											<img src="images/3bhk-1897-sq.ft.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor" alt="" />
+											<img src="images/3bhk-1897-sq.ft.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor" alt="" loading="lazy" />
 										</div>
 
 									</div>
@@ -797,42 +768,42 @@
 
 			<div class="mySlides">
 			  <div class="numbertext">1 / 8</div>
-			  <img src="images/2bhk-995-Sq.ft.jpg" style="width:100%">
+			  <img src="images/2bhk-995-Sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 
 			<div class="mySlides">
 			  <div class="numbertext">2 / 8</div>
-			  <img src="images/3bhk-1225-Sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1225-Sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 
 			<div class="mySlides">
 			  <div class="numbertext">3 / 8</div>
-			  <img src="images/3bhk-1250-Sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1250-Sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
 			  <div class="numbertext">4 / 8</div>
-			  <img src="images/3bhk-1270-sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1270-sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
 			  <div class="numbertext">5 / 8</div>
-			  <img src="images/3bhk-1385-sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1385-sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
 			  <div class="numbertext">6 / 8</div>
-			  <img src="images/3bhk-1535-sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1535-sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
 			  <div class="numbertext">7 / 8</div>
-			  <img src="images/3bhk-1645-sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1645-sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			<div class="mySlides">
 			  <div class="numbertext">8 / 8</div>
-			  <img src="images/3bhk-1897-sq.ft.jpg" style="width:100%">
+			  <img src="images/3bhk-1897-sq.ft.jpg" loading="lazy" style="width:100%">
 			</div>
 			
 			
@@ -845,77 +816,52 @@
 
 
 			<div class="column">
-			  <img class="demo cursor" src="images/2bhk-995-Sq.ft.jpg" style="width:100%" onclick="currentSlide(1)" alt="2 BHK 995 Sq.ft.">
+			  <img class="demo cursor" src="images/2bhk-995-Sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(1)" alt="2 BHK 995 Sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1225-Sq.ft.jpg" style="width:100%" onclick="currentSlide(2)" alt="3 BHK-1225 Sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1225-Sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(2)" alt="3 BHK-1225 Sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1250-Sq.ft.jpg" style="width:100%" onclick="currentSlide(3)" alt="3 BHK 1250 Sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1250-Sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(3)" alt="3 BHK 1250 Sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1270-sq.ft.jpg" style="width:100%" onclick="currentSlide(4)" alt="3 BHK 1270 sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1270-sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(4)" alt="3 BHK 1270 sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1385-sq.ft.jpg" style="width:100%" onclick="currentSlide(5)" alt="3 BHK 1385 sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1385-sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(5)" alt="3 BHK 1385 sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1535-sq.ft.jpg" style="width:100%" onclick="currentSlide(6)" alt="3 BHK 1535 sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1535-sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(6)" alt="3 BHK 1535 sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1645-sq.ft.jpg" style="width:100%" onclick="currentSlide(7)" alt="3 BHK 1645 sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1645-sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(7)" alt="3 BHK 1645 sq.ft.">
 			</div>
 			<div class="column">
-			  <img class="demo cursor" src="images/3bhk-1897-sq.ft.jpg" style="width:100%" onclick="currentSlide(8)" alt="3 BHK 1897 sq.ft.">
+			  <img class="demo cursor" src="images/3bhk-1897-sq.ft.jpg" style="width:100%" loading="lazy" onclick="currentSlide(8)" alt="3 BHK 1897 sq.ft.">
 			</div>
 		  </div>
 		</div>
 <!--       End     By Lalit on 2021-10-03  for Image --!>
 
 	<!-- TESTIMONIAL -->
-	<section id="testimonial">
+	<section id="priceDetails">
 		<div class="container">
 			<div class="row">
-
-				<div class="col-md-12 col-sm-12">
+                
+				<div class="col-md-12 col-sm-12 ">
 					<div class="section-title">
 						<h2>Price Details</h2>
+                    </div>
+					<div class="col-md-4 col-sm-12">
+							<a class="section-btn btn btn-default smoothScroll" name="btnViewPriceList" id="btnViewPriceList" style="background-color:blue;display:block;"  href="#">View Price List</a>
 					</div>
-
-					<div class="owl-carousel owl-theme owl-client">
-						<div class="col-md-4 col-sm-4">
-							<div class="item" style="background-color: white;border: 15px solid green;padding: 20px;margin: 20px">
-								<div class="tst-image">
-									<img src="images/2bhk-995-Sq.ft.jpg" class="img-responsive" alt="" />
-								</div>
-								<div class="tst-author">
-									<h4>2 BHK</h4>
-								</div>
-								<p>42 Lacks onwards. But better we can have a call or whats up at 9555101838 Number to get offers and discount   </p>
-							</div>
-						</div>
-
-						<div class="col-md-4 col-sm-4">
-							<div class="item" style="background-color: white;border: 15px solid green;padding: 20px;margin: 20px">
-								<div class="tst-image">
-									<img src="images/3bhk-1225-Sq.ft.jpg" class="img-responsive" alt="" />
-								</div>
-								<div class="tst-author">
-									<h4>3 BHK</h4>
-								</div>
-								<p>52 Lacks onwards. But better we can have a call or whats up at 9555101838 Number to get offers and discount   </p>
-								
-							</div>
-						</div>
-
-						
-
-						
-
-					</div>
-
+					<div class="background">
+						<img id="PriceLst1"  src="images/PriceList1.jpg" width="100%" style="filter:blur(10px);"></img>	
+						<img id="PriceLst2" src="images/PriceList2.jpg" width="100%" style="filter:blur(10px);" ></img>
+                    </div>
 				</div>
 			</div>
+		</div>
 	</section>
 
 
@@ -947,7 +893,7 @@
 
 				<div class="col-md-6 col-sm-12">
 					<div class="contact-image">
-						<img src="images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls" />
+						<img src="images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls" loading="lazy" />
 					</div>
 				</div>
 
@@ -994,6 +940,19 @@
 
 					</div>
 				</div>
+                
+				<div class="col-md-4 col-sm-6">
+					<div class="footer-info">
+						<div class="section-title">
+							<h2>Offers</h2>
+						</div>
+						<address>
+							<p><a href="offers/">Offers & Discount</a></p>-->
+						</address>
+
+					</div>
+				</div>
+
 
 				<div class="col-md-4 col-sm-12">
 					<div class="footer-info newsletter-form">
@@ -1023,6 +982,69 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-    <script src="Javascript/all.js"></script>
+	 	 <!-- Added by Lalit on 03-10-2021 for image list-->
+	<script>
+		function openModal() {
+		  document.getElementById("MenuBar").style.display="none";
+		  document.getElementById("myModal").style.display = "block";
+		}
+
+		function closeModal() {
+		  document.getElementById("myModal").style.display = "none";
+		  document.getElementById("MenuBar").style.display = "block";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		
+	    $(document).ready(function(){
+    
+			window.onload = function() {
+		
+		    if(localStorage.getItem("detailsSubmitted")=="true")
+			{
+			   	$("#PriceLst1").removeAttr("style");
+		        $("#PriceLst2").removeAttr("style");
+				//$("#btnViewPriceList").style.display = "none";
+				$("#btnViewPriceList").css({display: "none"});
+                //$("#btnViewPriceList").css({display: "block"});
+				//$("#btnViewPriceList").hide();
+			}
+			else
+			{
+		       setTimeout(function() {
+			   $('.hover_bkgr_fricc').show();
+		       }, 10000);
+			}
+          }
+	   });
+	</script>
+	
 </body>
 </html>
