@@ -7,9 +7,10 @@
      <link rel = "icon" href = "images/logo.png"  type = "image/x-icon">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	 <meta name="facebook-domain-verification" content="3tq5sek6udo355uurm9h089xgcv7xl" />
      <meta name="description" content="Nirala Estate brings premium apartments in Tech Zone 4, Greater Noida West, Uttar Pradesh. Nirala Estate Phase 2,3 and 4 providing 2/3 BHK residential apartments at very affordable price ranges starting @ ₹ 42L ">
      <meta name="keywords" content="nirala estate, nirala estate construction update, nirala estate price list, nirala estate noida extension, nirala estate possession date, nirala world, nirala estate complaints, nirala estate phase 1, nirala estate brochure, nirala estate phase 2, nirala estate floor plan, nirala estate reviews">
-     <meta name="author" content="http://www.niralaestate.tk/">
+     <meta name="author" content="https://nirala-estate.org/">
 	 <meta name="ROBOTS" content="INDEX, FOLLOW" />
 	 <meta name="rating" content="Safe For Kids" />
      <meta name="googlebot" content="INDEX, FOLLOW" />
@@ -51,11 +52,11 @@
 
                 },
                 success: function () {
-                    
+                      localStorage.setItem("detailsSubmitted", "true");
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 },
                 error: function () {
-
+                   localStorage.setItem("detailsSubmitted", "true");
                    window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 }
 
@@ -140,14 +141,22 @@
 					date:''
                 },
                 success: function () {
-				      $("#PriceLst1").removeAttr("style");
-		              $("#PriceLst2").removeAttr("style");
+				      $("#PriceLstPhaseII_1").removeAttr("style");
+		              $("#PriceLstPhaseII_2").removeAttr("style");
+					  $("#PriceLstPhaseIII_1").removeAttr("style");
+		              $("#PriceLstPhaseIII_2").removeAttr("style");
+					  $("#PriceLstPhaseIV_1").removeAttr("style");
+		              $("#PriceLstPhaseIV_2").removeAttr("style");
 					  localStorage.setItem("detailsSubmitted", "true");
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 },
                 error: function () {
-				      $("#PriceLst1").removeAttr("style");
-		              $("#PriceLst2").removeAttr("style");
+				      $("#PriceLstPhaseII_1").removeAttr("style");
+		              $("#PriceLstPhaseII_2").removeAttr("style");
+					  $("#PriceLstPhaseIII_1").removeAttr("style");
+		              $("#PriceLstPhaseIII_2").removeAttr("style");
+					  $("#PriceLstPhaseIV_1").removeAttr("style");
+		              $("#PriceLstPhaseIV_2").removeAttr("style");
 					  localStorage.setItem("detailsSubmitted", "true");
                       window.alert('Thank you for showing interest in the project. Soon we will call you for exciting offers');
                 }
@@ -221,59 +230,7 @@
 
  	<!-- HOME -->
 	<section id="home">
-		<div class="row">
-
-			<div class="owl-carousel owl-theme home-slider">
-				<div class="item item-first">
-					<div class="caption">
-						<div class="container">
-							<div class="col-md-6 col-sm-12">
-								<h1>Best Mivan Based Flats at resonable rates</h1>
-								<h3>Nirala Estate is strategically located in Greater Noida West and is a well-planned project. It is spread over a sprawling area of 25 Acre</h3>
-								<a href="#offers" class="section-btn btn btn-default smoothScroll">Let's get offers & discount</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="item item-second">
-					<div class="caption">
-						<div class="container">
-							<div class="col-md-6 col-sm-12">
-								<h1>Phase II is about to deliver in march 2022.</h1>
-								<h3>The units are all Under Construction. The different types of units available are Flat, which have been designed to offer complete satisfaction.</h3>
-								<a href="#offers" class="section-btn btn btn-default smoothScroll">Let's get offers & discount</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="item item-third">
-					<div class="caption">
-						<div class="container">
-							<div class="col-md-6 col-sm-12">
-								<h1>Nirala Estate is like living in at one of the most serene places</h1>
-								<h3>Its a home you will cherish.Thats the beauty of Nirala Estate, inspired by the charm of modern and contemporary lifestyle.</h3>
-								<a href="#offers" class="section-btn btn btn-default smoothScroll">Let's get offers & discount</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="item item-fourth">
-					<div class="caption">
-						<div class="container">
-							<div class="col-md-6 col-sm-12">
-								<h1>It is a beautifully constructed Residential property that is sure to please you</h1>
-								<h3>In Second, third , fourth and fifth phase, almost 2000 flats will be delivered which are purely mivan based (concrete shuttering)</h3>
-								<a href="#offers" class="section-btn btn btn-default smoothScroll">Let's get offers & discount</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
+		<img class="w3-image" src="images/Banner.jpg" alt="Nirala Estate" style="width:100%;height:600px" >
 	</section>
 	
 
@@ -856,8 +813,19 @@
 							<a class="section-btn btn btn-default smoothScroll" name="btnViewPriceList" id="btnViewPriceList" style="background-color:blue;display:block;"  href="#">View Price List</a>
 					</div>
 					<div class="background">
-						<img id="PriceLst1"  src="images/PriceList1.jpg" width="100%" style="filter:blur(10px);"></img>	
-						<img id="PriceLst2" src="images/PriceList2.jpg" width="100%" style="filter:blur(10px);" ></img>
+					    <h4>Price List for phase II</h4>
+						<img id="PriceLstPhaseII_1"  src="images/PriceList_PhaseII_1.jpg" width="100%" loading="lazy" style="filter:blur(10px);"></img>	
+						<img id="PriceLstPhaseII_2" src="images/PriceList_PhaseII_2.jpg" width="100%" loading="lazy" style="filter:blur(10px);" ></img>
+                    </div>
+					<div class="background">
+					    <h4>Price List for phase III</h4>
+						<img id="PriceLstPhaseIII_1"  src="images/PriceList_PhaseIII_1.jpg" width="100%" loading="lazy" style="filter:blur(10px);"></img>	
+						<img id="PriceLstPhaseIII_2" src="images/PriceList_PhaseIII_2.jpg" width="100%" loading="lazy" style="filter:blur(10px);" ></img>
+                    </div>
+					<div class="background">
+					    <h4>Price List for phase IV</h4>
+						<img id="PriceLstPhaseIV_1"  src="images/PriceList_PhaseIV_1.jpg" width="100%" loading="lazy" style="filter:blur(10px);"></img>	
+						<img id="PriceLstPhaseIV_2" src="images/PriceList_PhaseIV_2.jpg" width="100%" loading="lazy" style="filter:blur(10px);" ></img>
                     </div>
 				</div>
 			</div>
@@ -936,7 +904,15 @@
 							<p>+91 9555101838</p>
 							<!--<p><a href="privacy-policy/">Privacy Policy</a></p>-->
 						</address>
-
+						<div class="section-title">
+							<h2>Social Media</h2>
+						</div>
+						<address>
+							<p><a href="https://www.facebook.com/NiralaEstateOrg">Connect Us On Facebook</a></p>
+						</address>
+						<address>
+							<p><a href="https://www.linkedin.com/company/niralaestate-org">Connect Us On LinkedIn</a></p>
+						</address>
 
 					</div>
 				</div>
@@ -949,7 +925,12 @@
 						<address>
 							<p><a href="offers/">Offers & Discount</a></p>-->
 						</address>
-
+						<div class="section-title">
+							<h2>Privacy Policy</h2>
+						</div>
+						<address>
+							<p><a href="privacy-policy/">View Policy document</a></p>
+						</address>
 					</div>
 				</div>
 
@@ -1029,8 +1010,12 @@
 		
 		    if(localStorage.getItem("detailsSubmitted")=="true")
 			{
-			   	$("#PriceLst1").removeAttr("style");
-		        $("#PriceLst2").removeAttr("style");
+			   	$("#PriceLstPhaseII_1").removeAttr("style");
+		        $("#PriceLstPhaseII_2").removeAttr("style");
+				$("#PriceLstPhaseIII_1").removeAttr("style");
+		        $("#PriceLstPhaseIII_2").removeAttr("style");
+				$("#PriceLstPhaseIV_1").removeAttr("style");
+		        $("#PriceLstPhaseIV_2").removeAttr("style");
 				//$("#btnViewPriceList").style.display = "none";
 				$("#btnViewPriceList").css({display: "none"});
                 //$("#btnViewPriceList").css({display: "block"});
